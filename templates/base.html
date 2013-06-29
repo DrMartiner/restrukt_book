@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        {% if debug %}
+            <link href="{{ STATIC_URL }}vendors/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+        {% else %}
+            <link href="{{ STATIC_URL }}vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        {% endif %}
+        <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen">
+        {% block extra_css %}
+        {% endblock %}
+    </head>
+    <body class="{% block class %}{% endblock %}">
+        <div class="navbar">
+            <div class="navbar-inner navbar-fixed-top">
+                <div class="container">
+                    <ul class="nav pull-left">
+                        <li>
+                            <a class="brand" href="#about_row">
+                                Главная
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#buy_row">
+                                <i class="icon-shopping-cart"></i>
+                                Купить
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#video_row">
+                                Видео
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#request_row">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#author_row">
+                                От автора
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container content">
+            <div class="content-wrapper">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="row-fluid" id="footer">
+            <div class="container">
+                footer
+            </div>
+        </div>
+    </body>
+
+    <!-- Vendors -->
+    {% if debug %}
+        <script src="{{ STATIC_URL }}vendors/jquery.js" type="text/javascript"></script>
+        <script src="{{ STATIC_URL }}vendors/plate.js" type="text/javascript"></script>
+        <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    {% else %}
+        <script src="{{ STATIC_URL }}vendors/jquery.min.js" type="text/javascript"></script>
+        <script src="{{ STATIC_URL }}vendors/plate.min.js" type="text/javascript"></script>
+        <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    {% endif %}
+    {% load js %}
+    {% django_js i18n=false jquery=false %}
+    {% block extra_js %}
+    {% endblock %}
+
+    {% if USE_YANDEX_METRIKA %}
+    {% endif %}
+
+    {% if USE_GOOGLE_ANALYTICS %}
+    {% endif %}
+</html>

@@ -1,0 +1,69 @@
+body {
+    background-image: url(/static/img/background.jpg);
+}
+.content-wrapper {
+    background-color: white;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+}
+.content {
+    width: 980px;
+    margin-top: 42px;
+}
+
+body.home {}
+body.home {}
+
+.home .row {
+    padding-top: 50px;
+}
+
+.home #about_row {
+    padding-top: 50px;
+}
+.home .book-logo {
+    height: 250px;
+    float: right;
+}
+.home .btn-success {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home .buy-form input {
+    width: 270px;
+}
+.home #buy_row {}
+.home #buy_row .row-fluid {
+    margin-left: 20px;
+}
+.home #buy_row {}
+.home #author_row {
+
+}
+.home #author_row .span9 p {
+    text-indent: 20px;
+}
+
+#video_row ul.thumbnails {
+    margin-left: auto;
+    margin-right: auto;
+}
+#video_row h3 {
+    font-size: 19.5px;
+    line-height: 27px;
+}
+#video_row .span3 > div.thumbnail {
+    /*min-height: 305px;*/
+}
+
+#footer {
+    background-color: white;
+    opacity: 0.92;
+    padding-top: 20px;
+}
+#footer .container {
+    min-height: 390px;
+    background-color: white;
+}

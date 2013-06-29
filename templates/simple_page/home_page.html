@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block extra_css %}
+    <link href="{{ STATIC_URL }}vendors/fancybox/jquery.fancybox.css" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block extra_js %}
+    {% if debug %}
+        <script src="{{ STATIC_URL }}vendors/fancybox/jquery.fancybox.js"></script>
+    {% else %}
+        <script src="{{ STATIC_URL }}vendors/fancybox/jquery.fancybox.pack.js"></script>
+    {% endif %}
+    <script src="http://www.youtube.com/player_api"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/youtube-player.js"></script>
+{% endblock %}
+
+{% block class %}home{% endblock %}
+
+{% block content %}
+    <div class="row" id="about_row">
+        <div class="span9">
+            <h1>Книга Реструкт</h1>
+            <p>
+
+            </p>
+        </div>
+        <div class="span3">
+            <img class="img-polaroid book-logo" src="{{ STATIC_URL }}img/book.jpg">
+        </div>
+    </div>
+
+    <div class="row buy-row" id="buy_row">
+        <div class="span4">
+            <p class="lead">
+                Стоиомсть книги 650 рублей
+            </p>
+        </div>
+        <div class="span4">
+            <form class="buy-form">
+                <fieldset>
+                    <label for="id_addrress">Адрес доставки</label>
+                    <input type="text" id="id_addrress" placeholder="г. Омск, ул. Рыбная, 4, кв 5" />
+                    <label for="id_name">ФИО</label>
+                    <input type="text" id="id_name" placeholder="Иванов Иван Иванович" />
+                    <label for="id_email">Email</label>
+                    <input type="text" id="id_email" placeholder="ivan@mail.ru">
+                    <label for="id_amount">Итого</label>
+                    <input type="text" id="id_amount" disabled="disabled" value="850 рублей">
+                    <label for=""></label>
+                    <button type="submit" class="btn btn-large btn-success">
+                        <i class="icon-shopping-cart icon-white"></i> Купить
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="span4">
+            <p class="lead">
+                Доствка "Почтой Роиссе" 200 рублей 14 дней
+            </p>
+        </div>
+    </div>
+
+    <div class="row" id="video_row">
+        <div class="span12">
+            <h2>Видео</h2>
+        </div>
+        <ul class="thumbnails">
+            {% for video in videos %}
+                <li class="span3">
+                    <div class="thumbnail">
+                        <a class="thumbnail fancybox fancybox.iframe" href="http://www.youtube.com/embed/{{ video.code }}?enablejsapi=1&wmode=opaque">
+                            <img src="http://img.youtube.com/vi/{{ video.code }}/hqdefault.jpg" alt="{{ video.name }}">
+                        </a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="row" id="request_row">
+        <div class="span12">
+        </div>
+    </div>
+
+    <div class="row" id="author_row">
+        <div class="span9">
+            <h1>От автора</h1>
+            <p>
+                Здравствуйте, мои маленькие любители экстремизма!
+            </p>
+            <p>
+                Я примерно знаю, что вы ожидаете увидеть в этой книге. И уверен, что это вы увидите. Но спешу вас заверить, в ней на самом деле ничего этого нет. Вся книга придумана от начала и до конца. Любые совпадения с реальными людьми и событиями или случайны или являются плодом вашего воспаленного экстремизмом разума. Автор не согласен ни с одним написанным в книге словом. Мало того, он, на всякий случай глубоко её осуждает. Извиняется перед всеми, кого она непременно оскорбит. Не советует читать книгу никому. Особенно — агрессивно настроенным группам граждан, в том числе несовершеннолетних.
+            </p>
+            <p>
+                Надеюсь, что вы не свихнетесь от ее прочтения так, как автор свихнулся для ее написания. Жизнь ради Идеи — глупость. Жить надо ради удовольствия. Для того, чтобы заработать побольше денег, купить машину, квартиру, дачу. Жениться и вырастить сына. Твердо усвойте это перед тем, как читать дальше.
+            </p>
+        </div>
+        <div class="span3">
+            <img class="img-polaroid" src="{{ STATIC_URL }}img/author.jpg">
+        </div>
+    </div>
+{% endblock %}
