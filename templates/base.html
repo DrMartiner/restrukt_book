@@ -19,30 +19,33 @@
         <div class="navbar">
             <div class="navbar-inner navbar-fixed-top">
                 <div class="container">
+                    {% ifnotequal request.path '/' %}
+                        {% url 'home_page' as home_page_url %}
+                    {% endifnotequal %}
                     <ul class="nav pull-left">
                         <li>
-                            <a class="brand" href="#about_row">
+                            <a class="brand" href="{{ home_page_url }}#about_row">
                                 Главная
                             </a>
                         </li>
                         <li>
-                            <a href="#buy_row">
+                            <a href="{{ home_page_url }}#buy_row">
                                 <i class="icon-shopping-cart"></i>
                                 Купить
                             </a>
                         </li>
                         <li>
-                            <a href="#video_row">
+                            <a href="{{ home_page_url }}#video_row">
                                 Видео
                             </a>
                         </li>
                         <li>
-                            <a href="#request_row">
+                            <a href="{{ home_page_url }}#request_row">
                                 Отзывы
                             </a>
                         </li>
                         <li>
-                            <a href="#author_row">
+                            <a href="{{ home_page_url }}#author_row">
                                 От автора
                             </a>
                         </li>
