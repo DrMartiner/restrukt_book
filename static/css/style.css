@@ -61,7 +61,10 @@ body.home {}
 #footer {
     background-color: white;
     opacity: 0.92;
-    padding-top: 20px;
+    padding-top: 10px;
+}
+#footer .row {
+    padding-top: 0;
 }
 #footer .container {
     min-height: 390px;
