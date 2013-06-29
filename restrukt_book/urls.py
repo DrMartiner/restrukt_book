@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^success/$', OrderSuccess.as_view(), name='order_success'),
     url(r'^djangojs/', include('djangojs.urls')),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
+    url(r'^sitemap\.xml', TemplateView.as_view(template_name='sitemao.xml', content_type='text/xml')),
 )
 
 if settings.DEBUG:
