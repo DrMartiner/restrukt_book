@@ -67,15 +67,17 @@
             <h2>Видео</h2>
         </div>
         <ul class="thumbnails">
+            <noindex>
             {% for video in videos %}
                 <li class="span3">
                     <div class="thumbnail">
-                        <a class="thumbnail fancybox fancybox.iframe" href="http://www.youtube.com/embed/{{ video.code }}?enablejsapi=1&wmode=opaque">
+                        <a class="thumbnail fancybox fancybox.iframe" rel="nofollow" href="http://www.youtube.com/embed/{{ video.code }}?enablejsapi=1&wmode=opaque">
                             <img src="http://img.youtube.com/vi/{{ video.code }}/hqdefault.jpg" alt="{{ video.name }}">
                         </a>
                     </div>
                 </li>
             {% endfor %}
+            </noindex>
         </ul>
     </div>
 
