@@ -3,6 +3,7 @@
 from django.conf import settings
 from django.contrib import admin
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
 from apps.simple_page.views import HomePage
 from apps.simple_page.views import OrderFail
 from apps.simple_page.views import OrderSuccess
@@ -14,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^fail/$', OrderFail.as_view(), name='order_fail'),
     url(r'^success/$', OrderSuccess.as_view(), name='order_success'),
     url(r'^djangojs/', include('djangojs.urls')),
+    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
 )
 
 if settings.DEBUG:

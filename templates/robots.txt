@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /fail/
+Disallow: /success/
+Disallow: /djangojs*
+Disallow: /admin*
