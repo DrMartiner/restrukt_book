@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}{% endblock %}
+{% block title %}{{ config.ORDER_SUCCESS_TITLE }}{% endblock %}
 
 {% block content %}
-
+    <div class="row">
+        <div class="span12">
+            <h1>{{ config.ORDER_SUCCESS_TITLE }}</h1>
+            <p>
+                {{ configORDER_SUCCESS_TEXT|safe }}
+            </p>
+        </div>
+    </div>
 {% endblock %}

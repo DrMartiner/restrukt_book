@@ -137,7 +137,13 @@ CONSTANCE_REDIS_CONNECTION = {
     'db': 0,
 }
 CONSTANCE_CONFIG = {
-
+    'SITE_TITLE': (u'Книга Реструкт', 'Title'),
+    'SITE_KEYWORDS': (u' ', 'keywords'),
+    'SITE_DESCRIPTION': (u' ', 'description'),
+    'ORDER_SUCCESS_TITLE': (u' ', u'Заголовок успешной оплаты'),
+    'ORDER_SUCCESS_TEXT': (u' ', u'Текст успешной оплаты'),
+    'ORDER_FAIL_TITLE': (u' ', u'Заголовок неуспешной оплаты'),
+    'ORDER_FAIL_TEXT': (u' ', u'Текст неуспешной оплаты'),
 }
 
 LOGGING_DIR = os.path.join(SITE_ROOT, 'logs')
