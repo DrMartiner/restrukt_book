@@ -4,3 +4,4 @@ Disallow: /fail/
 Disallow: /success/
 Disallow: /djangojs*
 Disallow: /admin*
+Disallow: /grappelli*

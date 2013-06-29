@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     url(r'^djangojs/', include('djangojs.urls')),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     url(r'^sitemap\.xml', TemplateView.as_view(template_name='sitemao.xml', content_type='text/xml')),
+    url(r'^grappelli/', include('grappelli.urls')),
 )
 
 if settings.DEBUG:
