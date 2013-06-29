@@ -46,8 +46,8 @@
                     <input type="text" id="id_name" placeholder="Иванов Иван Иванович" />
                     <label for="id_email">Email</label>
                     <input type="text" id="id_email" placeholder="ivan@mail.ru">
-                    <label for="id_amount">Итого</label>
-                    <input type="text" id="id_amount" disabled="disabled" value="850 рублей">
+                    <!--label for="id_amount">Итого</label>
+                    <input type="text" id="id_amount" disabled="disabled" value="850 рублей"-->
                     <label for=""></label>
                     <button type="submit" class="btn btn-large btn-success">
                         <i class="icon-shopping-cart icon-white"></i> Купить
@@ -68,15 +68,15 @@
         </div>
         <ul class="thumbnails">
             <noindex>
-            {% for video in videos %}
-                <li class="span3">
-                    <div class="thumbnail">
-                        <a class="thumbnail fancybox fancybox.iframe" rel="nofollow" href="http://www.youtube.com/embed/{{ video.code }}?enablejsapi=1&wmode=opaque">
-                            <img src="http://img.youtube.com/vi/{{ video.code }}/hqdefault.jpg" alt="{{ video.name }}">
-                        </a>
-                    </div>
-                </li>
-            {% endfor %}
+                {% for video in videos %}
+                    <li class="span3">
+                        <div class="thumbnail">
+                            <a class="thumbnail fancybox fancybox.iframe" rel="nofollow" href="http://www.youtube.com/embed/{{ video.code }}?enablejsapi=1&wmode=opaque">
+                                <img src="http://img.youtube.com/vi/{{ video.code }}/hqdefault.jpg" alt="{{ video.name }}">
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
             </noindex>
         </ul>
     </div>
