@@ -18,7 +18,7 @@ body.home {}
     padding-top: 50px;
 }
 
-.home #about_row {
+.home #about {
     padding-top: 50px;
 }
 .home .book-logo {
@@ -34,27 +34,27 @@ body.home {}
 .home .buy-form input {
     width: 270px;
 }
-.home #buy_row {}
-.home #buy_row .row-fluid {
+.home #buy {}
+.home #buy .row-fluid {
     margin-left: 20px;
 }
-.home #buy_row {}
-.home #author_row {
+.home #buy {}
+.home #author {
 
 }
-.home #author_row .span9 p {
+.home #author .span9 p {
     text-indent: 20px;
 }
 
-#video_row ul.thumbnails {
+#video ul.thumbnails {
     margin-left: auto;
     margin-right: auto;
 }
-#video_row h3 {
+#video h3 {
     font-size: 19.5px;
     line-height: 27px;
 }
-#video_row .span3 > div.thumbnail {
+#video .span3 > div.thumbnail {
     /*min-height: 305px;*/
 }
 
