@@ -77,6 +77,8 @@
         <script src="{{ STATIC_URL }}vendors/plate.min.js" type="text/javascript"></script>
         <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     {% endif %}
+    <!-- TODO: впилить компрессию -->
+    <!-- TODO: сделать автоопределение высоты контента -->
     {% load js %}
     {% django_js i18n=false jquery=false %}
     {% block extra_js %}
