@@ -65,22 +65,22 @@ body.home {}
 .home #buy {}
 .home #buy > .span4 span.price:first-child {
     margin-top: 0;
+    font-size: 52px;
 }
 img.ruble-img {
     height: 1.5ex;
     margin-left: auto;
     margin-right: auto;
-}.price {
+    padding-bottom: 2px;
+}
+.price {
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 38px;
     text-align: center;
     display: block;
     margin-top: 13px;
 }
- .coast {
-     text-decoration: underline;
- }
 .pay-systems {
     height: 44px;
     margin-top: 10px;
