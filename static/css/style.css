@@ -52,7 +52,7 @@ body.home {}
 .home #order_form {
     padding-top: 8px;
     margin-top: 0;
-    background: url('/static/img/background-form.jpg') top right;
+    background: url('/static/img/background-form.jpg') top right no-repeat;
 }
 .home #order_form input {
     width: 270px;
