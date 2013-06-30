@@ -9,6 +9,10 @@ h1 {
     font-family: 'PT Sans Caption', sans-serif;
     font-weight: bold;
 }
+#logo {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 .content-wrapper {
     background-color: white;
