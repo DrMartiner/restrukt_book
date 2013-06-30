@@ -23,7 +23,9 @@ class MakeOrder(FormView):
     def form_invalid(self, form):
         errors = {}
         for name in form.fields:
-            errors[name] = form.errors.get(name)[0]
+            error = form.errors.get(name)
+            if error:
+                errors[name] = error[0]
         return HttpResponse(json.dumps(errors), status=200, mimetype='application/json')
 
     def form_valid(self, form):
