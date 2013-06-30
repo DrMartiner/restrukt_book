@@ -11,9 +11,9 @@ class VideoAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('name', 'sent', 'addrress', 'email_html', 'payment__status', 'created')
-    list_filter = ('sent', 'created')
-    search_fields = ('name', 'addrress')
+    list_display = ('name', 'sent', 'address', 'email_html', 'created')
+    list_filter = ('sent', 'created', 'payment__status')
+    search_fields = ('name', 'address')
 
     def email_html(self, obj):
         return '<a href="mailto:{0}">{0}</a>'.format(obj.email)
