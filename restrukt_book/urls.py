@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
 from apps.simple_page.views import HomePage
+from apps.simple_page.views import MakeOrder
 from apps.simple_page.views import OrderFail
 from apps.simple_page.views import OrderSuccess
 
@@ -12,6 +13,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', HomePage.as_view(), name='home_page'),
+    url(r'^make-order/$', MakeOrder.as_view(), name='order_make'),
     url(r'^fail/$', OrderFail.as_view(), name='order_fail'),
     url(r'^success/$', OrderSuccess.as_view(), name='order_success'),
     url(r'^djangojs/', include('djangojs.urls')),

@@ -41,11 +41,11 @@
             <form class="buy-form">
                 <fieldset>
                     <label for="id_addrress">Адрес доставки</label>
-                    <input type="text" id="id_addrress" placeholder="г. Омск, ул. Рыбная, 4, кв 5" />
+                    <input type="text" maxlength="256" id="id_addrress" placeholder="город, улица, дом, квартира, индекс" />
                     <label for="id_name">ФИО</label>
-                    <input type="text" id="id_name" placeholder="Иванов Иван Иванович" />
+                    <input type="text" maxlength="128" id="id_name" placeholder="Иванов Иван Иванович" />
                     <label for="id_email">Email</label>
-                    <input type="text" id="id_email" placeholder="ivan@mail.ru">
+                    <input type="text" maxlength="75" id="id_email" placeholder="ivan@mail.ru">
                     <!--label for="id_amount">Итого</label>
                     <input type="text" id="id_amount" disabled="disabled" value="850 рублей"-->
                     <ul class="thumbnails pay-systems">

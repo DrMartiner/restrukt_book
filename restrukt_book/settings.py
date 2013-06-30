@@ -74,7 +74,7 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-SECRET_KEY = os.environ['SECRET_KEY']
+#SECRET_KEY = os.environ['SECRET_KEY']
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',

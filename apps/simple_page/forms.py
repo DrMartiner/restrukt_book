@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
+from .models import Order
 
 
 class OrderForm(forms.ModelForm):
-
     class Meta:
-        exclude = ('pub_date', 'is_pay')
+        exclude = ('sent', 'payment', 'created')
+        model = Order

@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from django.views.generic import TemplateView
-from apps.simple_page.models import Video
+import json
+from django.http import HttpResponse
+from django.views.generic import TemplateView, FormView
+from .forms import OrderForm
+from pay2pay.models import Payment
+from .models import Video
 
 
 class HomePage(TemplateView):
@@ -11,6 +15,26 @@ class HomePage(TemplateView):
         ctx = super(HomePage, self).get_context_data(**kwargs)
         ctx['videos'] = Video.objects.filter(show=True)
         return ctx
+
+
+class MakeOrder(FormView):
+    form_class = OrderForm
+
+    def form_invalid(self, form):
+        errors = {}
+        for name in form.fields:
+            errors[name] = form.errors.get(name)[0]
+        return HttpResponse(json.dumps(errors), status=200, mimetype='application/json')
+
+    def form_valid(self, form):
+        payment = Payment()
+        payment.save()
+
+        order = form.save()
+        order.payment = payment
+        order.save()
+
+        return HttpResponse(status=201)
 
 
 class OrderSuccess(TemplateView):
