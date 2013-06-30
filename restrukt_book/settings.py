@@ -150,6 +150,7 @@ CONSTANCE_CONFIG = {
     'SITE_404_TEXT': (u' ', u'Текст 404'),
     'SITE_500_TITLE': (u' ', u'Заголовок 500'),
     'SITE_500_TEXT': (u' ', u'Текст 500'),
+    'HOME_RECENSION': (u' ', u'Рецензия'),
     'ORDER_SUCCESS_TITLE': (u' ', u'Заголовок успешной оплаты'),
     'ORDER_SUCCESS_TEXT': (u' ', u'Текст успешной оплаты'),
     'ORDER_FAIL_TITLE': (u' ', u'Заголовок неуспешной оплаты'),
