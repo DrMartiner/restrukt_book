@@ -65,7 +65,6 @@ MEDIA_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'media'))
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'static'))
-COMPRESS_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'static'))
 
 STATICFILES_DIRS = ()
 
