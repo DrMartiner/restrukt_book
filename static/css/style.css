@@ -38,7 +38,24 @@ body.home {}
 .home #buy .row-fluid {
     margin-left: 20px;
 }
-.home #buy {}
+.home #buy > .span4 {
+    text-align: center;
+}
+img.ruble-img {
+    height: 1.5ex;
+    margin-left: auto;
+    margin-right: auto;
+}
+#price {
+    font-size: 2em;
+    text-align: center;
+}
+.pay-systems {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .home #author {
 
 }

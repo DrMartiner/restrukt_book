@@ -33,9 +33,9 @@
 
     <div class="row buy-row" id="buy">
         <div class="span4">
-            <p class="lead">
-                Стоиомсть книги 650 рублей
-            </p>
+            <span id="price">
+                650 <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
+            </span>
         </div>
         <div class="span4">
             <form class="buy-form">
@@ -48,10 +48,28 @@
                     <input type="text" id="id_email" placeholder="ivan@mail.ru">
                     <!--label for="id_amount">Итого</label>
                     <input type="text" id="id_amount" disabled="disabled" value="850 рублей"-->
+                    <ul class="thumbnails pay-systems">
+                        <li>
+                            <img src="{{ STATIC_URL }}img/ps_qiwilk_32.png" alt="QiWi кошелек">
+                        </li>
+                        <li>
+                            <img src="{{ STATIC_URL }}img/ps_bank_32.png" alt="Visa & MasterCard">
+                        </li>
+                        <li>
+                            <img src="{{ STATIC_URL }}img/ps_ac_32.png" alt="Альфаклик">
+                        </li>
+                        <li>
+                            <img src="{{ STATIC_URL }}img/ps_wmr_32.png" alt="WebMoney WMR">
+                        </li>
+                        <li>
+                            <img src="{{ STATIC_URL }}img/ps_wmz_32.png" alt="WebMoney WMZ">
+                        </li>
+                    </ul>
                     <label for=""></label>
                     <button type="submit" class="btn btn-large btn-success">
                         <i class="icon-shopping-cart icon-white"></i> Купить
                     </button>
+
                 </fieldset>
             </form>
         </div>
