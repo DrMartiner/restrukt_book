@@ -25,7 +25,7 @@
     <body class="{% block class %}{% endblock %}">
         {% include "includes/menu.html" %}
 
-        <div class="container content">
+        <div class="container" id="content">
             <div class="content-wrapper">
                 {% block content %}
                 {% endblock %}
@@ -60,6 +60,7 @@
             <script src="{{ STATIC_URL }}vendors/plate.min.js" type="text/javascript"></script>
             <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         {% endif %}
+        <script src="{{ STATIC_URL }}scripts/utils.js" type="text/javascript"></script>
     {% endcompress %}
     {% load js %}
     {% django_js i18n=false jquery=false %}

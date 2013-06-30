@@ -1,5 +1,5 @@
 <div class="navbar">
-    <div class="navbar-inner navbar-fixed-top">
+    <div class="navbar-inner navbar-fixed-top" id="menu">
         <div class="container">
             {% ifnotequal request.path '/' %}
                 {% url 'home_page' as home_page_url %}
