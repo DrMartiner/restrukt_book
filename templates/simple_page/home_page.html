@@ -36,14 +36,32 @@
                 650 <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
             </span>
         </div>
-        <div class="span4">
-            <form id="order-form">
-                <label for="id_address">Адрес доставки</label>
-                <input type="text" maxlength="256" id="id_address" placeholder="город, улица, дом, квартира, индекс" />
-                <label for="id_name">ФИО</label>
-                <input type="text" maxlength="128" id="id_name" placeholder="Иванов Иван Иванович" />
-                <label for="id_email">Email</label>
-                <input type="text" maxlength="75" id="id_email" placeholder="ivan@mail.ru">
+        <div class="span8">
+            <form id="order_form" class="form-actions">
+                <div class="control-group">
+                    <label class="control-label" for="id_address">Адрес доставки</label>
+                    <div class="controls">
+                        <input type="text" maxlength="256" id="id_address" name="address" placeholder="город, улица, дом, квартира, индекс" />
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_name">ФИО</label>
+                    <div class="controls">
+                        <input type="text" maxlength="256" id="id_name" name="name" placeholder="ФИО полностью" />
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_email">Почта</label>
+                    <div class="controls">
+                        <input type="text" maxlength="256" id="id_email" name="email" placeholder="Для уведомлений" />
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+
                 <ul class="thumbnails pay-systems">
                     <li>
                         <img src="{{ STATIC_URL }}img/ps_qiwilk_32.png" alt="QiWi кошелек">
@@ -61,16 +79,17 @@
                         <img src="{{ STATIC_URL }}img/ps_wmz_32.png" alt="WebMoney WMZ">
                     </li>
                 </ul>
-                <label for=""></label>
                 <button type="submit" class="btn btn-large btn-success">
                     <i class="icon-shopping-cart icon-white"></i> Купить
                 </button>
+                <img id="loader" src="{{ STATIC_URL }}img/loader.gif" />
             </form>
-        </div>
-        <div class="span4">
-            <p class="lead">
-                Доствка "Почтой Роиссе" 200 рублей 14 дней
-            </p>
+
+            <form id="payment_form" action="https://merchant.pay2pay.com/?page=init" method="POST">
+                <input type="hidden" id="id_xml" name="xml" value="" />
+                <input type="hidden" id="id_sign" name="sign" value="" />
+                <input type="submit" id="payment_form_submit" value="" />
+            </form>
         </div>
     </div>
 

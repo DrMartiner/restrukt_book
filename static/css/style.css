@@ -26,20 +26,35 @@ body.home {}
     float: right;
 }
 .home .btn-success {
-    display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
+    margin-left: 96px;
 }
-.home #order-form input {
+.home #order_form #loader {
+    display: none;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+.home #order_form {
+    padding-top: 8px;
+    margin-top: 0;
+}
+.home #order_form input {
     width: 270px;
+}
+.home #order_form .controls {
+    min-height: 48px;
+}
+.home #order_form .help-inline {
+    max-width: 280px;
+    margin-bottom: 13px;
+}
+.home #payment_form input {
+    display: none;
 }
 .home #buy {}
 .home #buy .row-fluid {
     margin-left: 20px;
-}
-.home #buy > .span4 {
-    text-align: center;
 }
 img.ruble-img {
     height: 1.5ex;
@@ -51,6 +66,7 @@ img.ruble-img {
     text-align: center;
 }
 .pay-systems {
+    height: 44px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
