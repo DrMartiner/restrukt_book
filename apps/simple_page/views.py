@@ -4,6 +4,7 @@ import json
 from django.http import HttpResponse
 from django.views.generic import TemplateView, FormView
 from .forms import OrderForm
+from constance import config
 from pay2pay.models import Payment
 from .models import Video
 
@@ -30,8 +31,8 @@ class MakeOrder(FormView):
 
     def form_valid(self, form):
         payment = Payment(
-            amount=850.0,
-            description=u'Книга Реструкт'
+            amount=config.SHOP_ORDER_AMOUNT,
+            description=config.SHOP_ORDER_DESCIPTION
         )
         payment.save()
 

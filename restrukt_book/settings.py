@@ -155,6 +155,8 @@ CONSTANCE_CONFIG = {
     'ORDER_SUCCESS_TEXT': (u' ', u'Текст успешной оплаты'),
     'ORDER_FAIL_TITLE': (u' ', u'Заголовок неуспешной оплаты'),
     'ORDER_FAIL_TEXT': (u' ', u'Текст неуспешной оплаты'),
+    'SHOP_ORDER_DESCIPTION': (u'Книга Реструкт + доставка по Роиссе', u'Описание заказа'),
+    'SHOP_ORDER_AMOUNT': (850.0, u'Стоимость заказа'),
 }
 
 LOGGING_DIR = os.path.join(SITE_ROOT, 'logs')
