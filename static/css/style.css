@@ -31,7 +31,8 @@ body.home {}
     padding-top: 50px;
 }
 .home .book-logo {
-    height: 250px;
+    margin-top: 30px;
+    height: 210px;
     float: right;
 }
 .home .btn-success {
