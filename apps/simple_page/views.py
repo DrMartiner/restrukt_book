@@ -29,14 +29,22 @@ class MakeOrder(FormView):
         return HttpResponse(json.dumps(errors), status=200, mimetype='application/json')
 
     def form_valid(self, form):
-        payment = Payment()
+        payment = Payment(
+            amount=850.0,
+            description=u'Книга Реструкт'
+        )
         payment.save()
 
         order = form.save()
         order.payment = payment
         order.save()
 
-        return HttpResponse(status=201)
+        pay_data = {
+            'xml': payment.xml.encode('base64'),
+            'sign': payment.signature,
+        }
+
+        return HttpResponse(json.dumps(pay_data), status=201, mimetype='application/json')
 
 
 class OrderSuccess(TemplateView):
