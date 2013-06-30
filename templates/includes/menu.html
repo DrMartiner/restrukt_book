@@ -1,0 +1,37 @@
+<div class="navbar">
+    <div class="navbar-inner navbar-fixed-top">
+        <div class="container">
+            {% ifnotequal request.path '/' %}
+                {% url 'home_page' as home_page_url %}
+            {% endifnotequal %}
+            <ul class="nav pull-left">
+                <li>
+                    <a class="brand" href="{{ home_page_url }}#about">
+                        Главная
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ home_page_url }}#buy">
+                        <i class="icon-shopping-cart"></i>
+                        Купить
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ home_page_url }}#video">
+                        Видео
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ home_page_url }}#request">
+                        Отзывы
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ home_page_url }}#author">
+                        От автора
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
