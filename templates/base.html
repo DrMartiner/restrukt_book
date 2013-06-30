@@ -48,13 +48,17 @@
         </div>
     </body>
 
+    {% if debug %}
+        <script src="{{ STATIC_URL }}vendors/jquery.js" type="text/javascript"></script>
+    {% else %}
+        <script src="{{ STATIC_URL }}vendors/jquery.min.js" type="text/javascript"></script>
+    {% endif %}
+
     {% compress js %}
         {% if debug %}
-            <script src="{{ STATIC_URL }}vendors/jquery.js" type="text/javascript"></script>
             <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.js" type="text/javascript"></script>
         {% else %}
             <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-            <script src="{{ STATIC_URL }}vendors/jquery.min.js" type="text/javascript"></script>
         {% endif %}
         <script src="{{ STATIC_URL }}scripts/utils.js" type="text/javascript"></script>
         {% block extra_js %}
