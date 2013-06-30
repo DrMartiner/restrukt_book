@@ -27,3 +27,9 @@ dj-database-url
 django-grappelli
 django.js
 redis
+versiontools
+BeautifulSoup<4.0
+lxml
+html5lib
+slimit
+django-compressor

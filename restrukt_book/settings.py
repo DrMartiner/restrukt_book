@@ -45,7 +45,9 @@ else:
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'local.drmartiner.pro',
 ]
+INTERNAL_IPS = ALLOWED_HOSTS
 
 TIME_ZONE = 'Europe/Moscow'
 
@@ -62,12 +64,14 @@ MEDIA_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'media'))
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'static'))
+COMPRESS_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'static'))
 
 STATICFILES_DIRS = ()
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -120,6 +124,7 @@ INSTALLED_APPS = (
     'south',
     'email_html',
     'djangojs',
+    'compressor',
 
     'apps.simple_page',
 

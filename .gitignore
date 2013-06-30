@@ -4,6 +4,7 @@
 logs/*
 media/*
 cover/*
+static/CACHE/*
 database.sqlite3
 
 .DS_Store

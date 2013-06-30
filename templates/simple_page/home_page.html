@@ -7,11 +7,6 @@
 {% endblock %}
 
 {% block extra_js %}
-    {% if debug %}
-        <script src="{{ STATIC_URL }}vendors/fancybox/jquery.fancybox.js"></script>
-    {% else %}
-        <script src="{{ STATIC_URL }}vendors/fancybox/jquery.fancybox.pack.js"></script>
-    {% endif %}
     <script src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/youtube-player.js"></script>
 {% endblock %}
