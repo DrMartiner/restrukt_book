@@ -3,11 +3,7 @@
 {% block title %}{{ config.SITE_500_TITLE }}{% endblock %}
 
 {% block extra_js %}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            setContentHeight();
-        });
-    </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/set-content-height.js"></script>
 {% endblock %}
 
 {% block content %}
