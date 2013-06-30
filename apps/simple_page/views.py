@@ -57,7 +57,7 @@ class OrderSuccess(TemplateView):
         return super(OrderSuccess, self).dispatch(*args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        return super(OrderForm, self).get(*args, **kwargs)
+        return super(OrderSuccess, self).get(*args, **kwargs)
 
 
 class OrderFail(TemplateView):
@@ -65,7 +65,7 @@ class OrderFail(TemplateView):
 
     @csrf_exempt
     def dispatch(self, *args, **kwargs):
-        return super(OrderSuccess, self).dispatch(*args, **kwargs)
+        return super(OrderFail, self).dispatch(*args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        return super(OrderForm, self).get(*args, **kwargs)
+        return super(OrderFail, self).get(*args, **kwargs)
