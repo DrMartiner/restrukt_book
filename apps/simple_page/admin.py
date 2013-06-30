@@ -17,6 +17,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     def email_html(self, obj):
         return '<a href="mailto:{0}">{0}</a>'.format(obj.email)
+    email_html.allow_tags = True
 
 admin.site.register(Video, VideoAdmin)
 admin.site.register(Order, OrderAdmin)
