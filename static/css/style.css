@@ -1,6 +1,15 @@
 body {
     background-image: url(/static/img/background.jpg);
+    font-family: 'Open Sans', sans-serif;
 }
+h1 {
+    font-family: 'PT Sans Caption', sans-serif;
+}
+#menu {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: bold;
+}
+
 .content-wrapper {
     background-color: white;
     border-left: 20px solid white;
@@ -53,18 +62,24 @@ body.home {}
     display: none;
 }
 .home #buy {}
-.home #buy .row-fluid {
-    margin-left: 20px;
+.home #buy > .span4 span.price:first-child {
+    margin-top: 0;
 }
 img.ruble-img {
     height: 1.5ex;
     margin-left: auto;
     margin-right: auto;
-}
-#price {
-    font-size: 2em;
+}.price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 38px;
     text-align: center;
+    display: block;
+    margin-top: 13px;
 }
+ .coast {
+     text-decoration: underline;
+ }
 .pay-systems {
     height: 44px;
     margin-top: 10px;
@@ -75,8 +90,9 @@ img.ruble-img {
 .home #author {
 
 }
-.home #author .span9 p {
+.home .text {
     text-indent: 20px;
+
 }
 
 #video ul.thumbnails {

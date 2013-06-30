@@ -21,7 +21,7 @@
 {% block content %}
     <script src="http://www.youtube.com/player_api"></script>
     <div class="row" id="about">
-        <div class="span9">
+        <div class="span9 text">
             <h1>Книга Реструкт</h1>
             {{ config.HOME_RECENSION|safe }}
         </div>
@@ -32,9 +32,18 @@
 
     <div class="row buy-row" id="buy">
         <div class="span4">
-            <span id="price">
-                650 <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
-            </span>
+                <span class="price">
+                    Стоимость книги
+                </span>
+                <span class="price coast">
+                    650 <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
+                </span>
+                <span class="price">+</span>
+                <span class="price">доставка</span>
+                <span class="price">Почтой Роиссе</span>
+                <span class="price coast">
+                    200 <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
+                </span>
         </div>
         <div class="span8">
             <form id="order_form" class="form-actions">
@@ -118,8 +127,8 @@
     </div>
 
     <div class="row" id="author">
-        <div class="span9">
-            <h1>От автора</h1>
+        <div class="span9 text">
+            <h2>От автора</h2>
             <p>
                 Здравствуйте, мои маленькие любители экстремизма!
             </p>
