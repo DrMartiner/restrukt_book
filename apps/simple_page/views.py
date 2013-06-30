@@ -57,7 +57,7 @@ class OrderSuccess(TemplateView):
         return super(OrderSuccess, self).dispatch(*args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        return super(OrderSuccess, self).get(*args, **kwargs)
+        return super(OrderSuccess, self).get(request, *args, **kwargs)
 
 
 class OrderFail(TemplateView):
@@ -68,4 +68,4 @@ class OrderFail(TemplateView):
         return super(OrderFail, self).dispatch(*args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        return super(OrderFail, self).get(*args, **kwargs)
+        return super(OrderFail, self).get(request, *args, **kwargs)
