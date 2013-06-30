@@ -31,7 +31,7 @@ body.home {}
     margin-left: auto;
     margin-right: auto;
 }
-.home .buy-form input {
+.home #order-form input {
     width: 270px;
 }
 .home #buy {}
