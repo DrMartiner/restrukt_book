@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'email_html',
     'djangojs',
     'compressor',
+    'pay2pay',
 
     'apps.simple_page',
 
