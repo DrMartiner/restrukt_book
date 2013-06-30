@@ -8,6 +8,7 @@ $(document).ready () ->
             address: $('#id_address').val()
             name: $('#id_name').val()
             email: $('#id_email').val()
+            csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()
 
         $.ajax
             type: 'POST'
