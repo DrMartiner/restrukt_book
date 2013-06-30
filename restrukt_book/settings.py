@@ -22,8 +22,9 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     ('Alexey Kuzmin', 'DrMaritner@gmail.com'),
 )
-
 MANAGERS = ADMINS
+
+ADMIN_HONEYPOT_EMAIL_ADMINS = False
 
 DATABASE_URL_DEFAUL = os.environ.get('DATABASE_URL_DEFAUL')
 if DATABASE_URL_DEFAUL:
