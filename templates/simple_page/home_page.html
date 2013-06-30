@@ -12,13 +12,13 @@
     {% else %}
         <script src="{{ STATIC_URL }}vendors/fancybox/jquery.fancybox.pack.js"></script>
     {% endif %}
-    <script src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/youtube-player.js"></script>
 {% endblock %}
 
 {% block class %}home{% endblock %}
 
 {% block content %}
+    <script src="http://www.youtube.com/player_api"></script>
     <div class="row" id="about">
         <div class="span9">
             <h1>Книга Реструкт</h1>
