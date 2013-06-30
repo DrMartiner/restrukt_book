@@ -21,12 +21,9 @@
 {% block content %}
     <script src="http://www.youtube.com/player_api"></script>
     <div class="row" id="about">
-        <div class="span10 text">
+        <div class="span12 text">
             <h1>Книга Реструкт</h1>
             {{ config.HOME_RECENSION|safe }}
-        </div>
-        <div class="span2">
-            <img class="img-polaroid book-logo" src="{{ STATIC_URL }}img/book.jpg">
         </div>
     </div>
 
@@ -35,11 +32,12 @@
                 <span class="price">
                     Книга <ins>650</ins> <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
                 </span>
+                <img src="{{ STATIC_URL }}img/book-cover.jpg" alt="Книга Реструкт Максима Тесака">
                 <span class="price">+</span>
                 <span class="price">
                     доставка <ins>200</ins> <img src="{{ STATIC_URL }}img/ruble.gif" class="ruble-img" />
                 </span>
-                <img src="{{ STATIC_URL }}img/ru_ems.jpg" alt="Доставка Почтой Роиссе">
+                <img src="{{ STATIC_URL }}img/ru_ems.jpg" alt="Досxтавка Почтой Роиссе">
         </div>
         <div class="span8">
             <form id="order_form" class="form-actions">
