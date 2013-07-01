@@ -2,6 +2,7 @@
 
 import json
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView, FormView
 from .forms import OrderForm
 from constance import config
@@ -52,6 +53,14 @@ class MakeOrder(FormView):
 class OrderSuccess(TemplateView, Confirm):
     template_name = 'simple_page/order_success.html'
 
+    def post(self, request, *args, **kwargs):
+        super(OrderSuccess, self).post(request, *args, **kwargs)
+        return super(OrderSuccess, self).get(request, *args, **kwargs)
+
 
 class OrderFail(TemplateView, Confirm):
     template_name = 'simple_page/order_fail.html'
+
+    def post(self, request, *args, **kwargs):
+        super(OrderFail, self).post(request, *args, **kwargs)
+        return super(OrderFail, self).get(request, *args, **kwargs)
