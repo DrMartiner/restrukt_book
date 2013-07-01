@@ -43,12 +43,16 @@ else:
         },
     }
 
-ALLOWED_HOSTS = [
+INTERNAL_IPS = [
     'localhost',
     '127.0.0.1',
     'local.drmartiner.pro',
 ]
-INTERNAL_IPS = ALLOWED_HOSTS
+
+ALLOWED_HOSTS = INTERNAL_IPS + [
+    'xn----7sbikllfs5abkmcm.xn--p1ai',
+    'www.xn----7sbikllfs5abkmcm.xn--p1ai',
+]
 
 TIME_ZONE = 'Europe/Moscow'
 
