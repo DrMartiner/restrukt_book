@@ -4,6 +4,10 @@ body {
 }
 h1 {
     font-family: 'PT Sans Caption', sans-serif;
+    text-transform: uppercase;
+}
+h2, h3 {
+    text-transform: uppercase;
 }
 #menu {
     font-family: 'PT Sans Caption', sans-serif;
@@ -70,7 +74,8 @@ body.home {}
 .home #buy {}
 .home #buy > .span4 span.price:first-child {
     margin-top: 0;
-    font-size: 52px;
+    font-size: 48px;
+    margin-bottom: 3px;
 }
 img.ruble-img {
     height: 1.5ex;
@@ -79,12 +84,14 @@ img.ruble-img {
     padding-bottom: 2px;
 }
 .price {
+    text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 38px;
     text-align: center;
     display: block;
     margin-top: 13px;
+    margin-bottom: 3px;
 }
 .pay-systems {
     height: 44px;
@@ -124,4 +131,8 @@ img.ruble-img {
 #footer .container {
     min-height: 390px;
     background-color: white;
+}
+ul.nav li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
