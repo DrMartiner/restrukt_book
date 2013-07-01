@@ -185,6 +185,12 @@ LOGGING = {
             'backupCount': 5,
             'formatter': 'message',
         },
+        'pay2pay': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': os.path.join(LOGGING_DIR, 'pay2pay.log'),
+            'formatter': 'message'
+        },
     },
     'loggers': {
         '': {
@@ -201,6 +207,11 @@ LOGGING = {
             'handlers': ['default', ],
             'level': 'DEBUG',
             'propagate': False
+        },
+        'pay2pay': {
+            'handlers': ['pay2pay'],
+            'level': 'ERROR',
+            'propagate': True
         },
     }
 }
