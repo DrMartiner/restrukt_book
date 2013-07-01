@@ -2,10 +2,10 @@
 
 import json
 from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView, FormView
 from .forms import OrderForm
 from constance import config
+from pay2pay.views import Confirm
 from pay2pay.models import Payment
 from .models import Video
 
@@ -49,23 +49,9 @@ class MakeOrder(FormView):
         return HttpResponse(json.dumps(pay_data), status=201, mimetype='application/json')
 
 
-class OrderSuccess(TemplateView):
+class OrderSuccess(TemplateView, Confirm):
     template_name = 'simple_page/order_success.html'
 
-    @csrf_exempt
-    def dispatch(self, *args, **kwargs):
-        return super(OrderSuccess, self).dispatch(*args, **kwargs)
 
-    def post(self, request, *args, **kwargs):
-        return super(OrderSuccess, self).get(request, *args, **kwargs)
-
-
-class OrderFail(TemplateView):
+class OrderFail(TemplateView, Confirm):
     template_name = 'simple_page/order_fail.html'
-
-    @csrf_exempt
-    def dispatch(self, *args, **kwargs):
-        return super(OrderFail, self).dispatch(*args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        return super(OrderFail, self).get(request, *args, **kwargs)
