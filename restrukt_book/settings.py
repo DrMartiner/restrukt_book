@@ -147,7 +147,8 @@ CONSTANCE_REDIS_CONNECTION = {
     'db': 0,
 }
 CONSTANCE_CONFIG = {
-    'SITE_TITLE': (u'Книга Реструкт', 'Title'),
+    'SITE_TITLE': (u'Книга Реструкт', 'title'),
+    'SITE_PHONE': (u'', u'Телефон'),
     'SITE_KEYWORDS': (u' ', 'keywords'),
     'SITE_DESCRIPTION': (u' ', 'description'),
     'SITE_404_TITLE': (u' ', u'Заголовок 404'),

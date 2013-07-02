@@ -90,6 +90,7 @@
             </form>
             <div class="row-fluid">
                 Есть вопросы? Задаем &mdash; <a href="http://vk.com/id171878219" title="Поддержка">Неллюшечка Егорычева</a>
+                {% if config.SITE_PHONE %}{{ config.SITE_PHONE }}{% endif %}
             </div>
 
             <form id="payment_form" action="https://merchant.pay2pay.com/?page=init" method="POST">
