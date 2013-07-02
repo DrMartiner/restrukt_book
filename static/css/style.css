@@ -34,6 +34,9 @@ body.home {}
 .home .row {
     padding-top: 50px;
 }
+.home #about {
+    padding-top: 0;
+}
 .home .book-logo {
     margin-top: 9px;
     height: 210px;
